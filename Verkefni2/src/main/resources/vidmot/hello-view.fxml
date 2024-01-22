@@ -33,7 +33,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" onAction="#leitaHandler" prefHeight="90.0" prefWidth="200.0" text="Leita eftir orði">
+      <Button fx:id="buttonleita" mnemonicParsing="false" onAction="#leitaHandler" prefHeight="90.0" prefWidth="200.0" text="Leita eftir orði">
          <HBox.margin>
             <Insets left="5.0" right="5.0" />
          </HBox.margin>
@@ -54,7 +54,7 @@
             <Font size="18.0" />
          </font>
       </TextArea>
-      <Button mnemonicParsing="false" onAction="#vistaHandler" prefHeight="366.0" prefWidth="200.0" text="Vista texta">
+      <Button fx:id="buttonvista" mnemonicParsing="false" onAction="#vistaHandler" prefHeight="366.0" prefWidth="200.0" text="Vista texta">
          <HBox.margin>
             <Insets left="5.0" right="5.0" />
          </HBox.margin>
@@ -75,7 +75,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" onAction="#teljaHandler" prefHeight="90.0" prefWidth="200.0" text="Telja orð">
+      <Button fx:id="buttontelja" mnemonicParsing="false" onAction="#teljaHandler" prefHeight="90.0" prefWidth="200.0" text="Telja orð">
          <HBox.margin>
             <Insets left="5.0" right="5.0" />
          </HBox.margin>

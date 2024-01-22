@@ -27,7 +27,6 @@ public class StrengirApplication extends javafx.application.Application {
         stage.show();
         stage.getScene().getRoot().requestFocus();
     }
-
     /**
      * Aðferðin main sem kallað er á þegar forritið er ræst
      * @param args skipanalínu viðfang

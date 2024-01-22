@@ -11,8 +11,26 @@ import javafx.scene.control.TextField;
  *****************************************************************************/
 public class Strengir {
 
-    // tilviksbreyta sem geymir strengi í fylki
+
+    /**
+     * private tilviksbreyta fyrir textafylki
+     */
     private String[] textafylki;
+
+    /**
+     * @return boolean, skilar true ef fylkið er tomt
+     */
+    public boolean isEmpty() {
+        return textafylki.length == 0;
+    }
+
+    /**
+     * Constructor fyrir Strengi. Initializear textafylki
+     * sem strengjalfylki af stærð 0.
+     */
+    public Strengir() {
+        textafylki = new String[0];
+    }
 
     /**
      * Aðferðin leita sem finnur fyrsta tilvik strengs í texta
@@ -22,14 +40,12 @@ public class Strengir {
     public int leita(TextField leitarstrengur) {
         for (int i = 0; i < textafylki.length; i++) {
             String leit = snid(leitarstrengur.getText());
-            if (snid(textafylki[i]).equals(leit)) {
-                return i;
+                if (snid(textafylki[i]).equals(leit)) {
+                    return i;
+                }
             }
-        }
         return -1;
     }
-
-
     /**
      * Aðferðin telja sem telur fjölda tilvika strengs í texta
      * @return int sem er fjöldi tilvika orða í textanum
@@ -47,8 +63,10 @@ public class Strengir {
        textafylki = texti.split("\\s+");
     }
 
-    // Aðferðin tekur inn streng og breytir öllum stöfum í lágstafi og fjarlægir
-    // alla stafi sem eru ekki bókstafir
+    /** Aðferðin tekur inn streng og breytir öllum stöfum í lágstafi og fjarlægir
+     * @return String skilar streng med nyju snidi
+     * @param strengur sem er breytt i nytt snid
+    */
     private String snid(String strengur) {
         strengur = strengur.toLowerCase().replaceAll("[^a-zA-ZáéíóúÁÉÍÓÚýÝ]", "");
         return strengur;
